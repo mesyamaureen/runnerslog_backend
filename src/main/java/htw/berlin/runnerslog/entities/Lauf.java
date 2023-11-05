@@ -1,11 +1,9 @@
-package htw.berlin.runnerslog.Entities;
+package htw.berlin.runnerslog.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import org.springframework.cglib.core.Local;
-import org.springframework.util.unit.DataUnit;
 
 import java.time.LocalTime;
 import java.util.Date;

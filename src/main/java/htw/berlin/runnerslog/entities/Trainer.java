@@ -1,4 +1,4 @@
-package htw.berlin.runnerslog.Entities;
+package htw.berlin.runnerslog.entities;
 
 import jakarta.persistence.Entity;
 

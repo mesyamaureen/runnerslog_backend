@@ -1,4 +1,4 @@
-package htw.berlin.runnerslog.Entities;
+package htw.berlin.runnerslog.entities;
 
 import jakarta.persistence.*;
 
@@ -12,18 +12,18 @@ public class User {
     private String passwort;
     private String name;
     private String vorname;
-    private String eMail;
+    private String Email;
 
     // parameterloser Konstruktor
     public User() {}
 
     // Konstruktor mit Parameter
-    public User(String benutzername, String passwort, String name, String vorname, String eMail) {
+    public User(String benutzername, String passwort, String name, String vorname, String Email) {
         this.benutzername = benutzername;
         this.passwort = passwort;
         this.name = name;
         this.vorname = vorname;
-        this.eMail = eMail;
+        this.Email = Email;
     }
 
     // GetterSetter jedes Attributs
@@ -37,7 +37,7 @@ public class User {
     public void setName(String name) { this.name = name; }
     public String getVorname() { return vorname; }
     public void setVorname(String vorname) { this.vorname = vorname; }
-    public String geteMail() { return eMail; }
-    public void seteMail(String eMail) { this.eMail = eMail; }
+    public String getEmail() { return Email; }
+    public void setEmail(String Email) { this.Email = Email; }
 
 }
