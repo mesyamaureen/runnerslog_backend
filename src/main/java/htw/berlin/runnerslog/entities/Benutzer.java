@@ -3,8 +3,8 @@ package htw.berlin.runnerslog.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class User {
+// @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public class Benutzer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -15,10 +15,10 @@ public class User {
     private String Email;
 
     // parameterloser Konstruktor
-    public User() {}
+    public Benutzer() {}
 
     // Konstruktor mit Parameter
-    public User(String benutzername, String passwort, String name, String vorname, String Email) {
+    public Benutzer(String benutzername, String passwort, String name, String vorname, String Email) {
         this.benutzername = benutzername;
         this.passwort = passwort;
         this.name = name;

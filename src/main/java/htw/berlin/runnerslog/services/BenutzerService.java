@@ -1,25 +1,25 @@
 package htw.berlin.runnerslog.services;
 
-import htw.berlin.runnerslog.entities.User;
-import htw.berlin.runnerslog.repositories.UserRepository;
+import htw.berlin.runnerslog.entities.Benutzer;
+import htw.berlin.runnerslog.repositories.BenutzerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService {
+public class BenutzerService {
     @Autowired
-    UserRepository userRepo;
+    BenutzerRepository userRepo;
 
-    public User save(User user) {
+    public Benutzer save(Benutzer user) {
      return userRepo.save(user);
     }
 
-    public User get(Long id) {
+    public Benutzer get(Long id) {
         return userRepo.findById(id).orElseThrow(() -> new RuntimeException());
     }
 
-    public User update(Long id, User user) {
-        User currentUser = get(id);
+    public Benutzer update(Long id, Benutzer user) {
+        Benutzer currentUser = get(id);
         currentUser.setBenutzername(user.getBenutzername());
         currentUser.setPasswort(user.getPasswort());
         currentUser.setName(user.getName());

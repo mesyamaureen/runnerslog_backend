@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import java.util.Date;
 
 @Entity
-public class Laufer extends User {
+public class Laufer extends Benutzer {
     private Double groesse;
     private Double gewicht;
     private String geschlecht;
