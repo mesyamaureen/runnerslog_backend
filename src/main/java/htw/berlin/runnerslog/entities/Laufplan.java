@@ -14,6 +14,7 @@ public class Laufplan {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date datum;
+    private String art;
     private String titel;
     private String beschreibung;
     private Boolean status;
@@ -21,8 +22,9 @@ public class Laufplan {
 
     public Laufplan(){}
 
-    public Laufplan(Date datum, String titel, String beschreibung, Boolean status, LocalTime zeit) {
+    public Laufplan(Date datum, String art, String titel, String beschreibung, Boolean status, LocalTime zeit) {
         this.datum = datum;
+        this.art = art;
         this.titel = titel;
         this.beschreibung = beschreibung;
         this.status = status;
@@ -34,6 +36,8 @@ public class Laufplan {
     public void setId(Long id) { this.id = id; }
     public Date getDatum() { return datum; }
     public void setDatum(Date datum) { this.datum = datum; }
+    public String getArt() { return  art; }
+    public void setArt(String art) { this.art = art; }
     public String getTitel() { return titel; }
     public void setTitel(String titel) { this.titel = titel; }
     public String getBeschreibung() { return beschreibung; }
