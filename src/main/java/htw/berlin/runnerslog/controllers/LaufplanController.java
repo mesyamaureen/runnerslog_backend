@@ -1,6 +1,5 @@
 package htw.berlin.runnerslog.controllers;
 
-import htw.berlin.runnerslog.entities.Lauf;
 import htw.berlin.runnerslog.entities.Laufplan;
 import htw.berlin.runnerslog.services.LaufplanService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,28 +12,28 @@ public class LaufplanController {
     @Autowired
     LaufplanService service;
 
-    @PostMapping("/alleLaufplaene")
+    @PostMapping("/alleLaeufe")
     public Laufplan createLaufplan(@RequestBody Laufplan laufplan) {
         return service.save(laufplan);
     }
 
-    @GetMapping("/alleLaufplaene/{id}")
+    @GetMapping("/alleLaeufe/{id}")
     public Laufplan getLaufplan(@PathVariable String id) {
         Long laufplanId = Long.parseLong(id);
         return service.get(laufplanId);
     }
 
-    @GetMapping("/alleLaufplaene")
+    @GetMapping("/alleLaeufe")
     public List<Laufplan> getLaufplaene() {
         return service.getLaufplaene();
     }
 
-    @PutMapping("/alleLaufplaene/{id}")
+    @PutMapping("/alleLaeufe/{id}")
     public Laufplan updateLaufplan(@PathVariable Long id, @RequestBody Laufplan laufplan) {
         return service.update(id, laufplan);
     }
 
-    @DeleteMapping("/alleLaufplaene/{id}")
+    @DeleteMapping("/alleLaeufe/{id}")
     public boolean deleteLaufplan(@PathVariable String id) {
         Long laufplanId = Long.parseLong(id);
         return service.delete(laufplanId);
