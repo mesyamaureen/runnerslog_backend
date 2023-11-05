@@ -12,28 +12,28 @@ public class LaufplanController {
     @Autowired
     LaufplanService service;
 
-    @PostMapping("/alleLaeufe")
+    @PostMapping("/alleLaufplaene")
     public Laufplan createLaufplan(@RequestBody Laufplan laufplan) {
         return service.save(laufplan);
     }
 
-    @GetMapping("/alleLaeufe/{id}")
+    @GetMapping("/alleLaufplaene/{id}")
     public Laufplan getLaufplan(@PathVariable String id) {
         Long laufplanId = Long.parseLong(id);
         return service.get(laufplanId);
     }
 
-    @GetMapping("/alleLaeufe")
+    @GetMapping("/alleLaufplaene")
     public List<Laufplan> getLaufplaene() {
         return service.getLaufplaene();
     }
 
-    @PutMapping("/alleLaeufe/{id}")
+    @PutMapping("/alleLaufplaene/{id}")
     public Laufplan updateLaufplan(@PathVariable Long id, @RequestBody Laufplan laufplan) {
         return service.update(id, laufplan);
     }
 
-    @DeleteMapping("/alleLaeufe/{id}")
+    @DeleteMapping("/alleLaufplaene/{id}")
     public boolean deleteLaufplan(@PathVariable String id) {
         Long laufplanId = Long.parseLong(id);
         return service.delete(laufplanId);

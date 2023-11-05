@@ -1,7 +1,6 @@
 package htw.berlin.runnerslog.controllers;
 
 import htw.berlin.runnerslog.entities.Lauf;
-import htw.berlin.runnerslog.entities.Laufplan;
 import htw.berlin.runnerslog.services.LaufService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
