@@ -1,9 +1,13 @@
 package htw.berlin.runnerslog.controllers;
 
+import htw.berlin.runnerslog.entities.Kommentar;
+import htw.berlin.runnerslog.entities.Lauf;
 import htw.berlin.runnerslog.entities.Laufer;
 import htw.berlin.runnerslog.services.LauferService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class LauferController {
@@ -19,6 +23,11 @@ public class LauferController {
     public Laufer getLaufer(@PathVariable String id) {
         Long lauferId = Long.parseLong(id);
         return service.get(lauferId);
+    }
+
+    @GetMapping("/alleLaeufer")
+    public List<Laufer> getLaeufer() {
+        return service.getLaeufer();
     }
 
     @PutMapping("/alleLaeufer/{id}")

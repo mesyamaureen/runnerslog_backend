@@ -1,9 +1,13 @@
 package htw.berlin.runnerslog.services;
 
+import htw.berlin.runnerslog.entities.Kommentar;
 import htw.berlin.runnerslog.entities.Laufer;
 import htw.berlin.runnerslog.repositories.LauferRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class LauferService {
@@ -16,6 +20,13 @@ public class LauferService {
 
     public Laufer get(Long id) {
         return lauferRepo.findById(id).orElseThrow(() -> new RuntimeException());
+    }
+
+    public List<Laufer> getLaeufer() {
+        Iterable<Laufer> iterator = lauferRepo.findAll();
+        List<Laufer> laeufer = new ArrayList<Laufer>();
+        for (Laufer laufer : iterator) laeufer.add(laufer);
+        return laeufer;
     }
 
     public Laufer update(Long id, Laufer laufer) {
