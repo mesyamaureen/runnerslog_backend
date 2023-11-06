@@ -15,7 +15,7 @@ public class KommentarController {
     @Autowired
     KommentarService service;
 
-    @PostMapping("/alleKommentare")
+    @PostMapping("/kommentar")
     public Kommentar createKommentar(@RequestBody Kommentar kommentar) { return service.save(kommentar); }
 
     @GetMapping("/alleKommentare")

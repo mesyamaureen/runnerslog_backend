@@ -12,7 +12,7 @@ public class LaufplanController {
     @Autowired
     LaufplanService service;
 
-    @PostMapping("/alleLaufplaene")
+    @PostMapping("/laufplan")
     public Laufplan createLaufplan(@RequestBody Laufplan laufplan) {
         return service.save(laufplan);
     }

@@ -11,7 +11,7 @@ public class TrainerController {
     @Autowired
     TrainerService service;
 
-    @PostMapping("/alleTrainers")
+    @PostMapping("/trainer")
     public Trainer createTrainer(@RequestBody Trainer trainer){
         return service.save(trainer);
     }

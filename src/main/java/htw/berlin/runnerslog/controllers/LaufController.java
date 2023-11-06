@@ -12,7 +12,7 @@ public class LaufController {
     @Autowired
     LaufService service;
 
-    @PostMapping("/alleLaeufe")
+    @PostMapping("/lauf")
     public Lauf createLauf(@RequestBody Lauf lauf) {
         return service.save(lauf);
     }

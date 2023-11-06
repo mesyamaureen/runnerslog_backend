@@ -10,7 +10,7 @@ public class BenutzerController {
     @Autowired
     BenutzerService service;
 
-    @PostMapping("/alleBenutzer")
+    @PostMapping("/benutzer")
     public Benutzer createBenutzer(@RequestBody Benutzer benutzer){
         return service.save(benutzer);
     }
