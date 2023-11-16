@@ -1,4 +1,6 @@
 # runnerslog
+Frontend für [dieses Backend](https://github.com/mesyamaureen/runnerslog_frontend) hier zu erreichen.
+
 Diese Web-Applikation wird zum Zweck des Abschluss vom Modul Web-Technologien an der Wirtschaftsinformatik HTW Berlin entwickelt.
 
 # Über runnerslog
