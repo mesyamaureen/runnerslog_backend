@@ -1,7 +1,5 @@
 package htw.berlin.runnerslog.controllers;
 
-import htw.berlin.runnerslog.entities.Kommentar;
-import htw.berlin.runnerslog.entities.Lauf;
 import htw.berlin.runnerslog.entities.Laufer;
 import htw.berlin.runnerslog.services.LauferService;
 import org.springframework.beans.factory.annotation.Autowired;
